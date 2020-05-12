@@ -49,9 +49,9 @@ module.exports = app => {
                 if (err) console.log(err);
                 products = data.rows.map(productRecord => {
                     return {
-                        id: productRecord.rohitraj__Product_Id__c,
                         name: productRecord.name,
                         quantity: 0,
+                        id: productRecord.rohitraj__product_id__c,
                         picture: "https://drive.google.com/uc?export=view&id="+productRecord.rohitraj__picture_url__c,
                         price: productRecord.rohitraj__price__c,
                         category: productRecord.rohitraj__Category__c,
